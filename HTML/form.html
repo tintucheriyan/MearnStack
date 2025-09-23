@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="fName">First Name</label>
+        <input type="text" name="fName"  id="fName" placeholder="enter the name" required><br><br>
+        <label for="sName">Secnd Name</label>
+        <input type="text" name="sName" id="sName" placeholder="enter the Snd name" required><br><br>
+        <label for="mob">Phone</label>
+        <input type="number" name="mob" id="mob" placeholder="Mobile" required><br><br>
+        <label for="DOB">DOB</label>
+        <input type="date" name="DOB" id="DOB" placeholder="DOB" required><br><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="email" required><br><br>
+        <label for="pass">Password</label>
+        <input type="password" name="password" id="password" placeholder="password" required>
+
+      <div>
+        <h3>Gender</h3>
+        <input type="radio" name="gender" id="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="others">
+        <label for="others">Others</label>
+      </div>
+
+      <div>
+        <h3>Hobbies</h3>
+        <input type="checkbox" name="game" id="cricket">
+        <label for="cricket">Cricket</label>
+        <input type="checkbox" name="game" id="Football">
+        <label for="Football">Football</label>
+        <input type="checkbox" name="game" id="Tennis">
+        <label for="Tennis">Tennis</label>
+      </div>
+      <div>
+        <h3>State</h3>
+        <label for="state">State</label>
+        <select name="state" id="state">
+            <option value="calicut">Calicut</option>
+            <option value="Kochi">Kochi</option>
+            <option  value="Trissur">Trissur</option>
+        </select>
+      </div>
+
+      <div>
+        <h3>Address</h3>
+        <label for="Address"></label>
+        <textarea cols="35" rows="8"></textarea>
+      </div>
+      <div>
+      <h3>Upload</h3>
+      <label for="upload">Upload</label>
+      <input type="file"><br><br>
+      <input type="submit" id="submit">
+      </div>
+    </form>
+</body>
+</html>
