@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose=require('mongoose');
 const path = require('path');
+
 const userRoutes = require('./routes/userRoutes');
 const studentRoutes = require('./routes/studentRoutes');
 const authRoutes=require('./routes/authRoutes.js');

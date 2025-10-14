@@ -1,0 +1,11 @@
+
+.summary-box {
+  background-color: #e3f2fd;
+  border: 1px solid #90caf9;
+  border-radius: 8px;
+  height:300px;
+  width: 300px;
+  padding: 10px;
+  text-align: center;
+  
+}

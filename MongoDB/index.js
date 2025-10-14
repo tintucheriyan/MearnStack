@@ -117,7 +117,7 @@ client.connect()
     let user1=[{name: "mary",age: 60,mark: 38,place: "kochi", active: true},{name: "Ram",age: 40,mark: 36,place: "Calicut", active: true}]
     let delData={name: "Ram",age: 40,mark: 36,place: "Calicut", active: true}
      //return insertData(dbo).then(()=>getData(dbo));
-     //return insertMany(dbo,user1).then(()=>getAll(dbo))
+     return insertMany(dbo,user1).then(()=>getAll(dbo))
      //return delMany(dbo)
      //return delOne(dbo,delData)
      //return update(dbo)

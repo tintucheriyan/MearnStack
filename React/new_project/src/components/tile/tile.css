@@ -1,0 +1,12 @@
+.box{
+    width:200px;
+    height: 200px;
+    background-color: aqua;
+    padding: 100px
+    
+}
+
+.round{
+    border-radius: 30px;
+    height: 40px;
+}
