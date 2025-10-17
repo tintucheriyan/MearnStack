@@ -23,8 +23,11 @@ function Home() {
     })
 }
 
-function updateData(gmail){
-  const data={gmail:gmail,updatedData:{gmail:"abc@gmail.com",mark:50}}
+function updateData(oldGmail){
+  
+  const newName=prompt("enter the name")
+  const newMark=prompt("enter the mark")
+  const data={gmail:oldGmail,updatedData:{name:newName,mark:newMark}}
   axios.put("http://localhost:3600/updateUser",data)
   .then(()=>{
     axios.get("http://localhost:3600/getUser")

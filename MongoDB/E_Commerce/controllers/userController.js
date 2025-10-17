@@ -1,5 +1,6 @@
 const User=require('../models/userModel')
 const jwt = require('jsonwebtoken');
+const bcrypt=require('bcrypt')
 
 const createToken = (id) =>
              { return jwt.sign({ id },
@@ -20,12 +21,18 @@ async function register(req,res){
 async function login(req,res){
      const {password,email}=req.body
      const user=await User.findOne({email})
-     if(user && await user.matchPassword(password)){
-           const token=createToken(user.id);
-           return res.status(201).json({token});}
-     else
-        return res.json("invalid email or password")
-}
+      if (!user) {
+    return res.status(401).json({ success: false, message: "User not found" });
+  }
+
+  const isMatch = await bcrypt.compare(password, user.password);
+  if (!isMatch) {
+    return res.status(401).json({ success: false, message: "Incorrect password" });
+  }
+
+  // if success
+  res.json({ success: true, message: "Login successful" });
+};
 
 
 module.exports={register,login}

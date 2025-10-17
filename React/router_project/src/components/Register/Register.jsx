@@ -9,7 +9,7 @@ function Registration() {
     gmail: ''
   });
    const navigate = useNavigate();
-  const [users, setUsers] = useState([]);
+   const [users, setUsers] = useState([]);
 
   
 

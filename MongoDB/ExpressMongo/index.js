@@ -10,6 +10,9 @@ const app = express();
 const port = 3000;
 app.use(express.json());
 
+const cors=require('cors')
+app.use(cors())
+
 client
   .connect()
   .then(() => {
@@ -40,6 +43,27 @@ client
         });
     });
     /////////////////////////////////////////////////////////////////////////
+
+    app.post("/insertStudent", (req, res) => {
+      let data = req.body;
+      dbo
+        .collection("students")
+        .insertOne(data)
+
+        .then(() => {
+          return dbo
+            .collection("students")
+            .find()
+            .toArray()
+            .then((result) => {
+              res.json(result);
+            });
+        })
+        .catch((err) => {
+          res.send("failed to insert new student");
+        });
+    });
+    /////////////////////////////////////////////////////////////////
     app.post("/insertTeacher", (req, res) => {
       let data = req.body;
       dbo
@@ -232,8 +256,8 @@ client
     });
     /////////////////////////////////////// update using name
     app.put("/updateStudent", (req, res) => {
-      let mark = parseInt(req.query.mark);
-      let name = req.query.name;
+      let mark = parseInt(req.body.mark);
+      let name = req.query.oldname;
       dbo
         .collection("students")
         .updateOne({ name: name }, { $set: { mark: mark } })
@@ -254,7 +278,7 @@ client
     });
     //////////////////////////////////
     app.delete("/deleteUser", (req, res) => {
-      let name = req.query.name;
+      let name = req.body.name;
       dbo
         .collection("students")
         .findOne({ name: name })
