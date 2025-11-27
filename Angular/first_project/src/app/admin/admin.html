@@ -1,0 +1,9 @@
+<p>admin works!</p>
+<div>{{name}}</div>
+<br>
+<div>{{display()}}</div>
+<br>
+<div><input type="number" [value]="mark"></div>
+<div><button (click)="show()">click</button></div>
+<div><button [disabled]="isdisabled">click</button></div>
+<div><input type="text" [(ngModel)]="name" placeholder="enter the name" ><p>my name is {{name}}</p></div>

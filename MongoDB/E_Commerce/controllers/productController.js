@@ -20,7 +20,7 @@ async function updateProduct(req,res){
 
 async function createProduct(req,res) {
     const product=await Product.create(req.body)
-    res.json(product)
+    res.json({ success: true, message:"sucessfully created the product"})
 }
 
 async function deleteProduct(req,res){

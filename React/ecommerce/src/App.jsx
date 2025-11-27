@@ -8,6 +8,8 @@ import { BrowserRouter } from "react-router-dom"
 import CategoryList from "./components/cartPreview"
 import Login from "./components/login"
 import Register from "./components/registration"
+import Electronics from "./components/category/Admin/electronics"
+import ElectronicsPage from "./pages/electronicsPage"
 
 function App() {
  
@@ -26,8 +28,11 @@ function App() {
             <Route path="/categories" element={<CategoryList/>}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/register" element={<Register />}></Route>
+            <Route path="/electronics" element={<Electronics />}></Route>
+            <Route path="/electronicsPage" element={<ElectronicsPage />}></Route>
         </Routes>
-       
+      
+      
   </BrowserRouter>
     
       

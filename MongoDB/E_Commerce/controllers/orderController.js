@@ -1,9 +1,6 @@
 const Order=require('../models/orderModel')
 
 
-async function Home(req,res){
-    res.send("WELCOME TO USER PROFILE")
-}
 async function createOrder(req,res){
     const order=await Order.create({...req.body,
       user: req.user._id})

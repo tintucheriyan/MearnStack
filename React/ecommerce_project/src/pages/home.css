@@ -1,0 +1,11 @@
+/* Make the page take full height */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+/* Make content expand to push footer down */
+.content-wrap {
+  flex: 1;
+}

@@ -30,7 +30,7 @@ const protect = async (req, res, next) => {
 };
 
 const admin = (req, res, next) => {
-  if (req.user && req.user.isAdmin) {
+  if (req.user && req.user.role) {
     next(); // user is admin, allow access
   } else {
     res.status(403).json({ message: 'Access denied, admin only' });

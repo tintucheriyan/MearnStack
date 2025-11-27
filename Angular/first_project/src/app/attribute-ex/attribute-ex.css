@@ -1,0 +1,16 @@
+.red{
+    background-color: aqua;
+    color: blue;
+}
+.green{
+    background-color: brown;
+    color: aliceblue;
+}
+.isactive{
+    color: rgb(14, 20, 20);
+    background-color: brown;
+}
+.inactive{
+    color: rgb(13, 3, 23);
+    background-color: rgb(44, 124, 124);
+}

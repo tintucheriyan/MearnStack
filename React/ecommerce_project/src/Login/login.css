@@ -1,0 +1,100 @@
+/* Background and centering */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Login card */
+.login {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  text-align: center;
+}
+
+/* Heading */
+.login h2 {
+  margin-bottom: 25px;
+  color: #333333;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* Labels */
+.login label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #444444;
+}
+
+/* Inputs */
+.login input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Focus effect */
+.login input:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 5px rgba(79, 172, 254, 0.6);
+}
+
+/* Button */
+.login .btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4facfe;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login .btn:hover {
+  background-color: #007bff;
+}
+
+/* Sign up link */
+.login p {
+  color: #333333;
+}
+
+.login p span {
+  color: #4facfe;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.login p span:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login {
+    width: 90%;
+    padding: 20px;
+  }
+  .login h2 {
+    font-size: 22px;
+  }
+}
